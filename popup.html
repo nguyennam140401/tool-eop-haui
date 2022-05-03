@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container main">
+			<div class="d-flex">
+				<p>Trạng thái :</p>
+				<button
+					type="button"
+					class="btn btn-sm btn-toggle"
+					id="btn_state"
+					data-toggle="button"
+					aria-pressed="true"
+					autocomplete="off"
+				>
+					<div class="handle"></div>
+				</button>
+			</div>
+			<div class="d-flex align-items-center">
+				<p class="mb-0">Cài đặt thời gian :</p>
+				<input type="text" style="width: 50px" class="ml-3" />
+			</div>
+		</div>
+		<div class="done_work">
+			<button class="btn btn-md btn-primary">Qua bài</button>
+		</div>
+		<!-- /.container -->
+		<script type="text/javascript" src="./tooleop.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
+		<script type="text/javascript" src="./jquery.min.js"></script>
+		<script type="text/javascript" src="./bootstrap.min.js"></script>
+	</body>
+</html>

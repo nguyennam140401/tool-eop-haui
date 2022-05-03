@@ -1,7 +1,7 @@
 // const timeWait = 30;
 // const btnSubmit = findElement("button", "submit");
 // const btnAnser = findElement("button", "answer");
-
+const btnState = document.querySelector("#btn_state");
 const findElement = (element, id) => {
 	return Array.from(document.querySelectorAll(`${element}`)).find((item) =>
 		item.getAttribute("id").includes(id)
@@ -67,14 +67,24 @@ const doneChooseAnser = async () => {
 const handle = async () => {
 	console.log("handle....");
 	await doneVocabulary();
+	clearPopup();
 	await doneChoose();
+	clearPopup();
 	await doneFillText();
+	clearPopup();
 	await doneChooseAnser();
+	clearPopup();
+};
+setInterval(() => {
+	handle();
+}, 50000);
+
+btnState?.addEventListener("click", () => {
+	console.log("hiii");
+});
+const clearPopup = () => {
 	document
 		.querySelectorAll("button.btn-secondary")
 		.forEach((item) => item.click());
 	document.querySelectorAll(".dbxclo").forEach((item) => item.click());
 };
-setInterval(() => {
-	handle();
-}, 50000);
